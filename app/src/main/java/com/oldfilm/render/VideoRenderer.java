@@ -338,7 +338,7 @@ public class VideoRenderer implements MediaPlayer.OnVideoSizeChangedListener,
                 mWindowSurface = null;
             }
 
-            GlUtil.checkGlError("releaseGl done");
+            //GlUtil.checkGlError("releaseGl done");
 
             mEglCore.release();
         }
