@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Old-Film</string>
+    <string name="sepia">褐色</string>
+    <string name="noise">噪点</string>
+    <string name="scratch">刮痕</string>
+    <string name="vignetting">暗角</string>
+</resources>

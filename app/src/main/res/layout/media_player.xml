@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="left|center_vertical"
+            android:layout_margin="4dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            tools:text="Celine Dion and Josh Groban Live (HD 720p)"
+            android:text="@string/config_vod_url"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:ellipsize = "marquee"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_ar_original"
+            android:src="@drawable/ic_ar"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="4dp"
+            android:layout_width="113dp"
+            android:layout_height="28dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_control"
+            android:src="@drawable/ic_pause"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_position"
+            tools:text="00:36"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_margin="4dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbar"
+            tools:progress="50" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            tools:text="01:12"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_margin="4dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_parameters"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <com.oldfilm.VerticalSeekBar
+                android:id="@+id/seek_bar_sepia"
+                android:progress="50"
+                android:progressDrawable="@drawable/bg_seek_bar"
+                android:thumb="@drawable/bg_seek_bar_thumb"
+                android:maxHeight="3dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="256dp" />
+
+            <TextView
+                android:text="@string/sepia"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <com.oldfilm.VerticalSeekBar
+                android:id="@+id/seek_bar_noise"
+                android:progress="50"
+                android:progressDrawable="@drawable/bg_seek_bar"
+                android:thumb="@drawable/bg_seek_bar_thumb"
+                android:maxHeight="3dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="256dp" />
+
+            <TextView
+                android:text="@string/noise"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <com.oldfilm.VerticalSeekBar
+                android:id="@+id/seek_bar_scratching"
+                android:progress="50"
+                android:progressDrawable="@drawable/bg_seek_bar"
+                android:thumb="@drawable/bg_seek_bar_thumb"
+                android:maxHeight="3dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="256dp" />
+
+            <TextView
+                android:text="@string/scratch"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <com.oldfilm.VerticalSeekBar
+                android:id="@+id/seek_bar_vignetting"
+                android:progress="50"
+                android:progressDrawable="@drawable/bg_seek_bar"
+                android:thumb="@drawable/bg_seek_bar_thumb"
+                android:maxHeight="3dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="256dp" />
+
+            <TextView
+                android:text="@string/vignetting"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

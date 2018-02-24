@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTextViewAttr">
+        <attr name="aspect_ratio_width" format="integer" />
+        <attr name="aspect_ratio_height" format="integer" />
+    </declare-styleable>
+</resources>
